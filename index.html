@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de Infracciones</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h2>Formulario de Infracciones</h2>
+        <form id="formulario">
+            <label for="nombre">Nombre Completo del Paletero</label>
+            <input type="text" id="nombre" name="nombre" required autofocus>
+
+            <label for="infraccion">Tipo de infracción</label>
+            <select id="infraccion" name="infraccion" required>
+                <option value="">Selecciona una</option>
+                <option value="Exceso de velocidad">Exceso de velocidad</option>
+                <option value="Mal estacionado">Mal estacionado</option>
+                <option value="No respetar señal">No respetar señal</option>
+                <option value="Otro">Otro</option>
+            </select>
+
+            <label for="observaciones">Observaciones</label>
+            <textarea id="observaciones" name="observaciones" rows="4"></textarea>
+
+            <label for="imagen">Foto de la infracción</label>
+            <input type="file" id="imagen" name="imagen" accept="image/*" capture="environment" required>
+
+            <input type="hidden" id="latitud" name="latitud">
+            <input type="hidden" id="longitud" name="longitud">
+
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="estado"></p>
+    </div>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
